@@ -1,9 +1,11 @@
 import express from "express";
 import path from "path";
 import fs from "fs";
-import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import admin from "firebase-admin";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Shared DB State
 let dbInstance: any = null;
@@ -128,7 +130,7 @@ function parseSpreadsheetCSV(csvContent: string): any[] {
 }
 
 // Safe bootstrap Loader for CSV data
-const csvFilePath = path.join(process.cwd(), "tickets_kb.csv");
+const csvFilePath = path.join(__dirname, "tickets_kb.csv");
 if (fs.existsSync(csvFilePath)) {
   try {
     const rawCSV = fs.readFileSync(csvFilePath, "utf8");
@@ -143,7 +145,7 @@ if (fs.existsSync(csvFilePath)) {
 
 // Initialize Firestore if credentials exist
 async function startFirestore() {
-  const blueprintConfigPath = path.join(process.cwd(), "firebase-applet-config.json");
+  const blueprintConfigPath = path.join(__dirname, "firebase-applet-config.json");
   if (fs.existsSync(blueprintConfigPath)) {
     try {
       const configRaw = fs.readFileSync(blueprintConfigPath, "utf8");
@@ -869,7 +871,8 @@ Do NOT wrap inside multiple objects. Verify validity of JSON. Do not write any c
 // Handle Vite middleware & fallback listening wrapping
 async function startListener() {
   if (process.env.NODE_ENV !== "production") {
-    const vite = await createViteServer({
+    const { createServer } = await import("vite");
+    const vite = await createServer({
       server: { middlewareMode: true },
       appType: "spa",
     });
