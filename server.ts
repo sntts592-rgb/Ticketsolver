@@ -149,8 +149,27 @@ async function startFirestore() {
       const configRaw = fs.readFileSync(blueprintConfigPath, "utf8");
       const firebaseConfig = JSON.parse(configRaw);
       
+      let credentialOption: any = null;
+      if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+        try {
+          const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+          credentialOption = admin.credential.cert(serviceAccount);
+          console.log("Using explicit FIREBASE_SERVICE_ACCOUNT service account credentials for Firestore.");
+        } catch (jsonErr) {
+          console.error("FIREBASE_SERVICE_ACCOUNT variable exists but failed to parse as JSON service account key:", jsonErr);
+        }
+      }
+
+      // Safe bypass if on Vercel style serverless deployment without credentials to prevent standard ADC hangs
+      if (process.env.VERCEL && !credentialOption) {
+        console.warn("Vercel context detected without explicit service account credentials. Standard ADC (Application Default Credentials) metadata sweeps are bypassed to avoid cold-start service gateway hangs. Operating via high-efficiency local in-memory fallback.");
+        dbInitializationError = "Firestore disabled on Vercel: FIREBASE_SERVICE_ACCOUNT environment variable is not configured. Falling back to local in-memory dataset.";
+        return;
+      }
+
       admin.initializeApp({
         projectId: firebaseConfig.projectId,
+        ...(credentialOption ? { credential: credentialOption } : {}),
       });
 
       // Handle custom databaseId with fallback to default database
@@ -173,7 +192,9 @@ async function startFirestore() {
       let snap;
       try {
         console.log(`Testing connection to active Firestore database (${customDbSelected ? firebaseConfig.firestoreDatabaseId : "default"})...`);
-        snap = await dbInstance.collection("tickets_kb").get();
+        const getPromise = dbInstance.collection("tickets_kb").get();
+        const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Firestore connection timed out after 5000ms")), 5000));
+        snap = await Promise.race([getPromise, timeoutPromise]) as any;
         isFirestoreReady = true;
         console.log("Connected to Cloud Firestore.");
       } catch (getErr: any) {
@@ -182,7 +203,9 @@ async function startFirestore() {
           console.warn(`Firestore Database ID '${firebaseConfig.firestoreDatabaseId}' not found (5 NOT_FOUND). Falling back to standard '(default)' database...`);
           try {
             dbInstance = admin.firestore();
-            snap = await dbInstance.collection("tickets_kb").get();
+            const fallbackPromise = dbInstance.collection("tickets_kb").get();
+            const fallbackTimeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error("Firestore connection timed out after 5000ms")), 5000));
+            snap = await Promise.race([fallbackPromise, fallbackTimeoutPromise]) as any;
             isFirestoreReady = true;
             console.log("Fallback sequence complete. Connected successfully to the (default) Firestore database.");
           } catch (fallbackErr) {
@@ -260,12 +283,15 @@ function calculateTextIntersectionScore(text: string, query: string): number {
   return hits / queryWords.length;
 }
 
-async function startServer() {
-  const app = express();
-  app.use(express.json({ limit: "15mb" }));
+const app = express();
+export { app };
 
-  // Seed / Firestore start
-  await startFirestore();
+app.use(express.json({ limit: "15mb" }));
+
+// Boot up Firestore in the background in a non-blocking fashion
+startFirestore().catch(e => {
+  console.error("Non-blocking background startFirestore failed:", e);
+});
 
   // API Route - System Status Info
   app.get("/api/status", (req, res) => {
@@ -840,7 +866,8 @@ Do NOT wrap inside multiple objects. Verify validity of JSON. Do not write any c
     }
   });
 
-  // Handle Vite middleware structure
+// Handle Vite middleware & fallback listening wrapping
+async function startListener() {
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
@@ -855,10 +882,14 @@ Do NOT wrap inside multiple objects. Verify validity of JSON. Do not write any c
     });
   }
 
-  const PORT = 3000;
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server launched on port ${PORT}`);
-  });
+  if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
+    const PORT = 3000;
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server launched on port ${PORT}`);
+    });
+  }
 }
 
-startServer();
+startListener().catch(err => {
+  console.error("Failed to bootstrap live startListener:", err);
+});
