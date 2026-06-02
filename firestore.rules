@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global Safety Net: Default Deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Validation helper for tickets_kb
+    function isValidTicketKB(data) {
+      return data.id is int &&
+             data.id >= 0 &&
+             data.intent is string && data.intent.size() <= 128 &&
+             data.category is string && data.category.size() <= 128 &&
+             data.assignment is string && data.assignment.size() <= 128 &&
+             (!data.keys().hasAny(['exampleQueries']) || (data.exampleQueries is string && data.exampleQueries.size() <= 2000)) &&
+             (!data.keys().hasAny(['requiredInfo']) || (data.requiredInfo is string && data.requiredInfo.size() <= 2000)) &&
+             (!data.keys().hasAny(['troubleshootingSteps']) || (data.troubleshootingSteps is string && data.troubleshootingSteps.size() <= 4000)) &&
+             (!data.keys().hasAny(['combinedText']) || (data.combinedText is string && data.combinedText.size() <= 5000)) &&
+             (!data.keys().hasAny(['embedding']) || (data.embedding is list && data.embedding.size() <= 4000));
+    }
+
+    // Collection: tickets_kb
+    match /tickets_kb/{ticketId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn() && isValidId(ticketId) && isValidTicketKB(incoming());
+      allow update: if isSignedIn() && isValidId(ticketId) && isValidTicketKB(incoming()) && (
+        // Enforce immutability of record ID
+        incoming().id == existing().id
+      );
+      allow delete: if isSignedIn();
+    }
+  }
+}

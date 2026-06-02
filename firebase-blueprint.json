@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "TicketKB": {
+      "title": "Ticket Knowledge Base",
+      "description": "An individual knowledge base record for search and auto-assignment routing.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Unique record ID"
+        },
+        "intent": {
+          "type": "string",
+          "description": "Name/Intent of the customer issue"
+        },
+        "category": {
+          "type": "string",
+          "description": "Core classification"
+        },
+        "exampleQueries": {
+          "type": "string",
+          "description": "Example queries"
+        },
+        "requiredInfo": {
+          "type": "string",
+          "description": "Required information gather list"
+        },
+        "troubleshootingSteps": {
+          "type": "string",
+          "description": "Step-by-step troubleshooting steps"
+        },
+        "assignment": {
+          "type": "string",
+          "description": "Assignment queue"
+        },
+        "combinedText": {
+          "type": "string",
+          "description": "Combined text for embeddings"
+        },
+        "embedding": {
+          "type": "array",
+          "description": "Gemini text embedding vector"
+        }
+      },
+      "required": ["id", "intent", "category", "assignment"]
+    }
+  },
+  "firestore": {
+    "tickets_kb": {
+      "schema": "TicketKB",
+      "description": "Core knowledge base and routing rules collection."
+    }
+  }
+}

@@ -1,0 +1,626 @@
+Intent,Category,Example Queries,Required Info,Troubleshooting Steps,Assignment
+wifi_guest_access,Network,"guest wifi, wifi for customer, temporary wifi","Name, Location, Device, StartDate, EndDate",Validate request ? Create guest account ? Share credentials ? Expiry check,ITC - Network
+wifi_credentials,Network,"wifi password, wifi login, activate wifi","Name, Location, Device",Check user eligibility ? Reset/Provide credentials ? Test login,ITC - Network
+wifi_issue,Network,"wifi not working, cannot connect wifi","Device, IP, Network type, Error",Check adapter ? Reconnect ? IP check ? Restart ? Escalate,ITC - Network
+switch_port_request,Network,"configure port, enable port, disable port","Device, Port number, Switch IP",Validate request ? Configure port ? Test connectivity,ITC - Network
+vlan_configuration,Network,"change vlan, assign vlan, port vlan config","Device, Port, VLAN ID",Verify VLAN ? Configure ? Test,ITC - Network
+access_point_request,Network,"install access point, office AP issue","Location, Device",Check requirement ? Install/configure AP ? Test signal,ITC - Network
+website_access_issue,Network,"cannot access website, site blocked","URL, IP, Network type",Check DNS ? Try different network ? Firewall check,ITC - Network
+vpn_issue,Network/Cyber,"vpn not working, resource access issue","IP, ISP, Network type",Check VPN ? ISP restriction ? Firewall ? Escalate,ITC - Network/Cyber
+firewall_request,Network,"allow port, smtp/smb access","Device, Port, Protocol",Validate ? Update firewall ? Test,ITC - Network
+ip_change_request,Network,"change IP, IP nating","Device, Current IP, New IP",Validate ? Update config ? Restart ? Test,ITC - Network
+network_device_issue,Network,"router issue, connectivity lost","Device, Location",Ping test ? Check device ? Restart ? Escalate,ITC - Network
+project_network_task,Network,"project setup, cctv project","Project details, Location",Gather requirements ? Configure network ? Validate,ITC - Network
+wifi_guest_access,Network,"guest wifi, customer wifi, studio wifi access","Name, Location, Device, StartDate, EndDate",Validate ? Create access ? Share credentials,ITC - Network
+wifi_issue,Network,"wifi not working, mobile wifi issue","Device, IP, Network type, Error",Check adapter ? reconnect ? IP ? restart,ITC - Network
+wifi_credentials,Network,"wifi password, activate wifi","Name, Location, Device",Reset credentials ? verify login,ITC - Network
+switch_port_request,Network,"enable port, configure port, port request","Device, Switch IP, Port",Configure ? test,ITC - Network
+vlan_configuration,Network,"change vlan, assign vlan","Device, Port, VLAN",Configure ? validate,ITC - Network
+access_point_request,Network,"new AP config, AP install","Location, MAC, Device",Configure AP ? test signal,ITC - Network
+firewall_request,Network,"firewall rule, allow port","Device, Port, Protocol",Update firewall ? validate,ITC - Network
+website_access_issue,Network,cannot access site,"URL, IP",DNS ? firewall ? test,ITC - Network
+vpn_issue,Network/Cyber,vpn access fails,"IP, ISP",Check VPN ? escalate,ITC - Network/Cyber
+network_device_issue,Network,"router issue, network flap, connection lost","Device, Location",Ping ? restart ? escalate,ITC - Network
+ip_nat_request,Network,"NAT config, IP nating","Device, IP details",Configure NAT ? test,ITC - Network
+network_general_issue,Network,"connection issue, unknown network problem","Device, Location",Basic troubleshooting ? escalate,ITC - Network
+vlan_configuration,Network,"enable jumbo frames, vlan config","Device, VLAN ID",Verify VLAN ? Apply config ? Test,ITC - Network
+network_connectivity_issue,Network,"connectivity issue, no internet","Device, IP, Location",Ping ? check gateway ? restart ? escalate,ITC - Network
+network_device_issue,Network,"switch disconnect, multiple switch issue","Device, Location",Check logs ? restart ? escalate,ITC - Network
+ip_nat_request,Network,"nat config, nat routing","Device, Source IP, Destination IP",Configure NAT ? test,ITC - Network
+switch_port_request,Network,"enable port, open port","Device, Switch, Port",Configure ? test,ITC - Network
+access_point_request,Network,"new access point, install AP","Location, Device",Install ? configure ? test signal,ITC - Network
+network_infrastructure_request,Network,"new switch setup, infra config","Device, Location",Setup ? configure ? validate,ITC - Network
+firewall_request,Network,"firewall change, allow traffic","Device, Rule details",Update firewall ? validate,ITC - Network
+internet_issue,Network,"no internet, losing internet","Device, IP",Check ISP ? gateway ? restart,ITC - Network
+network_testing_request,Network,4G failover testing,"Device, Location",Perform failover test ? validate,ITC - Network
+email_issue,Messaging,"email not working, emails not received","User, Device, Error",Check mailbox ? test send/receive ? fix,Messaging Team
+mailbox_storage_issue,Messaging,"mailbox full, archive full",User,Check quota ? clean/archive ? extend if needed,Messaging Team
+email_sync_issue,Messaging,emails not syncing on phone,"User, Device",Reconfigure account ? sync check,Messaging Team
+distribution_list_request,Messaging,"create DL, add/remove user in DL","DL name, User",Add/remove user ? confirm,Messaging Team
+shared_mailbox_access,Messaging,access shared mailbox,"Mailbox name, User",Grant permission ? verify,Messaging Team
+mailbox_creation,Messaging,"create mailbox, email for new user",User details,Create mailbox ? assign license,Messaging Team
+mailbox_permission_change,Messaging,remove user from mailbox,"User, Mailbox",Update permissions,Messaging Team
+email_configuration,Messaging,"email footer, out of office",User,Configure settings,Messaging Team
+teams_access_request,Messaging,"teams access, shared folder access","User, Team name",Grant access ? verify,Messaging Team
+team_creation,Messaging,create team,"Team name, members",Create team ? add users,Messaging Team
+user_onboarding,Messaging,"new user setup, new starter",User details,Create account ? assign access,Messaging Team
+license_request,Messaging,"office license, mailbox license",User,Assign license,Messaging Team
+generic_mailbox_request,Messaging,create generic email,Email name,Create shared mailbox,Messaging Team
+application_access_request,Messaging,"system access, performance hub","User, Application",Grant access,Messaging Team
+mailbox_creation,Messaging,"create email, new email address",User details,Create mailbox ? assign license ? verify,Messaging Team
+mailbox_storage_issue,Messaging,"mailbox full, increase mailbox size",User,Check quota ? extend/cleanup ? confirm,Messaging Team
+distribution_list_request,Messaging,"add/remove user in DL, update DL","DL name, User",Add/remove ? confirm,Messaging Team
+shared_mailbox_access,Messaging,access generic mailbox,"Mailbox, User",Grant permission ? verify,Messaging Team
+send_as_permission,Messaging,"send on behalf, send as permission","Mailbox, User",Grant send-as/send-on-behalf ? test,Messaging Team
+teams_issue,Messaging,"teams not working, no access to teams","User, Error",Check login ? permissions ? connectivity,Messaging Team
+teams_creation,Messaging,"create team, new channel","Team name, Members",Create ? add users ? verify,Messaging Team
+teams_resource_account,Messaging,"auto attendant, teams resource account","Account name, Purpose",Create resource account ? assign policy,Messaging Team
+license_request,Messaging,"MS license, Power Automate license","User, License type",Assign license ? verify,Messaging Team
+meeting_recording_recovery,Messaging,recover teams recording,"Meeting details, User",Check storage ? recover file,Messaging Team
+application_access_request,Messaging,Performance hub access,"User, App",Grant access ? verify,Messaging Team
+email_configuration,Messaging,"out of office, email settings",User,Configure OOO / settings,Messaging Team
+group_creation,Messaging,MS group creation,"Group name, Members",Create group ? assign members,Messaging Team
+user_onboarding,Messaging,"new employee setup, account + email",User details,Create account ? email ? license ? access,Messaging Team
+mailbox_creation,Messaging,"create email, new mailbox",User details,Create mailbox ? assign license,Messaging
+mailbox_deactivation,Messaging,"deactivate email, remove account",User,Disable mailbox ? revoke access,Messaging
+mailbox_storage_issue,Messaging,"archive full, mailbox full",User,Increase quota / clean,Messaging
+shared_mailbox_access,Messaging,mailbox access,"Mailbox, User",Grant permission,Messaging
+distribution_list_request,Messaging,"mailing list update, DL request","DL name, Users",Add/remove/update DL,Messaging
+email_forwarding,Messaging,forward emails,"User, target email",Configure forwarding,Messaging
+email_configuration,Messaging,"signature, outlook activation",User,Configure settings,Messaging
+send_as_permission,Messaging,allow send to everyone,"Mailbox, User",Update permissions,Messaging
+teams_creation,Messaging,create teams group/channel,"Name, Members",Create ? assign users,Messaging
+teams_channel_management,Messaging,"channel owner, channel email","Team, User",Update channel settings,Messaging
+teams_issue,Messaging,teams not working,"User, Error",Troubleshoot access,Messaging
+teams_federation_request,Messaging,teams federation,Org details,Configure federation,Messaging
+meeting_room_account,Messaging,meeting room account,Room details,Create resource account,Messaging
+user_onboarding,Messaging,new account + email,User details,Create account + email + access,Messaging
+user_deactivation,Messaging,disable user account,User,Disable account,Messaging
+onedrive_access,Messaging,shared folder access,"User, Folder",Grant access,Messaging
+application_access_request,Messaging,system/app access,"User, App",Grant access,Messaging
+email_system_integration,Messaging,device sending email,"Device, config",Configure SMTP/email,Messaging
+directory_issue,AD/Messaging,"duplicate account, wrong entity",User,Fix AD sync issue,Messaging/AD
+room_booking_issue,Messaging,meeting room issue,"Room, User",Check booking config,Messaging
+network_outage,Network,"site down, network outage","Location, Devices affected",Check core network ? ISP ? escalate,ITC - Network
+network_slowness,Network,"slow internet, poor connection","Device, Location",Check bandwidth ? latency ? congestion,ITC - Network
+network_connectivity_issue,Network,cannot access internet/app,"Device, IP",Ping ? gateway ? DNS ? restart,ITC - Network
+network_instability,Network,"intermittent disconnect, drops","Device, Location",Check logs ? packet loss ? restart,ITC - Network
+application_access_issue,Network,"cannot access SAP, Movilizer","App name, Device",Check network ? firewall ? app server,ITC - Network
+website_access_issue,Network,cannot access website,"URL, IP",DNS ? firewall ? proxy,ITC - Network
+vpn_issue,Network/Cyber,"VPN not working, SSL VPN issue","IP, User",Check VPN ? credentials ? firewall,ITC - Network/Cyber
+switch_port_request,Network,"port setup, VLAN port","Device, Port",Configure ? test,ITC - Network
+vlan_configuration,Network,VLAN config,"Device, VLAN ID",Configure VLAN ? test,ITC - Network
+network_device_issue,Network,"AP disconnect, switch issue","Device, Location",Check device ? restart ? logs,ITC - Network
+firewall_whitelist_request,Network,"whitelist URL, unblock site","URL, User",Add rule ? test,ITC - Network
+network_security_block,Network,"server blocked, kafka blocked","Server, Location",Check firewall ? unblock ? validate,ITC - Network
+network_monitoring_request,Network,"list of APs, usage report",Location,Fetch data ? provide report,ITC - Network
+internet_issue,Network,"no internet, multiple users affected","Device, Location",ISP ? gateway ? restart,ITC - Network
+guest_account_request,Network,new guest account,"Name, Location",Create guest access,ITC - Network
+switch_configuration,Network,new switch configuration,"Device, Location",Configure switch,ITC - Network
+network_connectivity_issue,Network,no internet on device,"Device, IP","Check IP, ping",ITC - Network
+network_outage,Network,no internet in warehouse,Location,Check network core,ITC - Network
+switch_port_request,Network,open switch port,"Switch, Port",Enable port,ITC - Network
+network_testing,Network,4G failover test,Device,Test failover,ITC - Network
+firewall_configuration,Network,ASA configuration,Device,Apply config,ITC - Network
+firewall_logs,Network,ASA logs,Device,Fetch logs,ITC - Network
+firewall_rule_request,Network,open port 443,Port,Update firewall,ITC - Network
+vlan_configuration,Network,VLAN for printer,VLAN ID,Configure VLAN,ITC - Network
+network_outage,Network,server down power cut,Location,Check power/network,ITC - Network
+dhcp_issue,Network,printer no IP,"Device, MAC",Renew IP,ITC - Network
+vlan_configuration,Network,printer VLAN setup,Device,Assign VLAN,ITC - Network
+network_hardware_request,Network,network cable request,Location,Provide cable,ITC - Network
+firewall_whitelist_request,Network,allow IP,IP,Update rule,ITC - Network
+application_access_issue,Network,SAP no access,"App, User",Check network,ITC - Network
+network_outage,Network,network not working,Location,Check infra,ITC - Network
+application_access_issue,Network,FTP issue,Server,Check port/firewall,ITC - Network
+network_issue,Network,shopfloor network issue,Location,Check connectivity,ITC - Network
+network_device_issue,Network,switch relocation,Device,Reconfigure,ITC - Network
+vlan_configuration,Network,remove gateway VLAN,VLAN,Update config,ITC - Network
+user_deactivation,AD,remove user from AD,User name,Disable account,Messaging/AD
+user_onboarding,Messaging,need email for user,User details,Create account + email,Messaging
+teams_issue,Messaging,teams channel missing,"User, Team",Check permissions,Messaging
+mailbox_creation,Messaging,create shared email,Email name,Create mailbox,Messaging
+teams_creation,Messaging,create teams group,"Team name, Members",Create team,Messaging
+mailbox_creation,Messaging,create mailbox for user,User,Assign mailbox,Messaging
+email_configuration,Messaging,email signature setup,User,Configure signature,Messaging
+email_configuration,Messaging,activate outlook,User,Activate account,Messaging
+mailbox_storage_issue,Messaging,archive mailbox full,User,Increase quota,Messaging
+email_forwarding,Messaging,forward emails,"User, Target email",Setup forwarding,Messaging
+shared_mailbox_access,Messaging,access accounting mailbox,"Mailbox, User",Grant access,Messaging
+teams_channel_management,Messaging,activate channel email,Team,Enable channel email,Messaging
+teams_creation,Messaging,create teams chat group,"Team, Members",Create channel,Messaging
+user_onboarding,Messaging,create account + email,User,Create AD + mailbox,Messaging
+email_configuration,Messaging,out of office,User,Configure OOO,Messaging
+security_policy_request,Messaging,unblock device policy,"Device, User",Update policy,Messaging
+teams_creation,Messaging,teams group request,Team,Create team,Messaging
+mailbox_deactivation,Messaging,deactivate email account,User,Disable mailbox,Messaging
+shared_mailbox_access,Messaging,HR mailbox access,"Mailbox, User",Grant permission,Messaging
+directory_issue,AD,duplicate AD account issue,User,Fix AD conflict,Messaging/AD
+mailbox_creation,Messaging,create email address,User,Create mailbox,Messaging
+user_onboarding,Messaging,create email and account,User,Setup account,Messaging
+email_system_integration,Messaging,device email configuration,Device,Setup SMTP,Messaging
+directory_management,AD,test AD accounts,Account details,Manage AD,Messaging/AD
+room_management,Messaging,room availability,Room,Check calendar,Messaging
+email_forwarding,Messaging,email forwarding request,User,Configure forwarding,Messaging
+onedrive_access,Messaging,add external user to folder,"User, Folder",Grant access,Messaging
+distribution_list_request,Messaging,newsletter mailing list,DL name,Create/update DL,Messaging
+shared_mailbox_access,Messaging,mailbox access,"Mailbox, User",Grant access,Messaging
+mailbox_storage_issue,Messaging,archive full,User,Increase quota,Messaging
+teams_creation,Messaging,create teams group,Team,Create team,Messaging
+distribution_list_request,Messaging,get DL for all users,Requirement,Generate list,Messaging
+teams_channel_management,Messaging,change channel owner,"Team, User",Update owner,Messaging
+room_booking_issue,Messaging,room booking issue,"Room, User",Check booking,Messaging
+send_as_permission,Messaging,enable send to everyone,User,Update permission,Messaging
+shared_mailbox_access,Messaging,UK AP mailbox access,"Mailbox, User",Grant access,Messaging
+shared_mailbox_access,Messaging,AR/AP mailbox access,Mailbox,Grant access,Messaging
+teams_federation_request,Messaging,teams federation,Org,Enable federation,Messaging
+meeting_room_account,Messaging,create meeting room account,Room details,Create resource,Messaging
+shared_mailbox_access,Messaging,access existing mailbox,"Mailbox, User",Grant access,Messaging
+server_performance_issue,Wintel,server performance is very bad,"Server name, time","Check CPU/memory usage, restart services",Wintel
+cpu_high_alert,Wintel,CPU usage exceeded threshold,"Server name, CPU %","Identify process, restart/kill process",Wintel
+disk_space_issue,Wintel,low disk space in C drive,"Server name, drive",Cleanup temp/log files,Wintel
+disk_utilization_alert,Wintel,disk usage above 95%,Server name,"Clear space, extend disk",Wintel
+repeated_disk_alert,Wintel,disk alert triggered multiple times,Server name,"Analyze logs, cleanup",Wintel
+power_outage_issue,Wintel,power cut affecting servers,Site details,Check UPS/server status,Wintel/Infra
+disk_space_issue,Wintel,low space in E drive,Server name,Cleanup/extend drive,Wintel
+cpu_alert,Wintel,CPU spike detected,Server name,Check running processes,Wintel
+server_down,Wintel,server not accessible,Server name,"Ping/RDP check, restart",Wintel
+multiple_server_down,Wintel,multiple servers not accessible,Server list,Check network/infrastructure,Wintel
+cpu_performance_issue,Wintel,CPU high again,Server name,Monitor usage,Wintel
+access_request,Wintel,need access,"User, system",Grant permissions,Wintel
+desktop_shortcut_issue,Wintel,link missing on desktop,App name,Recreate shortcut,Wintel
+folder_access_request,Wintel,access to folder,Folder path,Provide permission,Wintel
+service_account_creation,Wintel,create service account,Account name,Create account,Wintel
+user_group_addition,Wintel,add user to group,"User, group",Add in AD group,Wintel
+shared_folder_access,Wintel,access shared folder,Path,Grant access,Wintel
+system_access_request,Wintel,system access required,User details,Provide access,Wintel
+user_authorization,Wintel,approve user access,User info,Validate and approve,Wintel
+application_access,Wintel,need PerfHub access,User details,Assign access,Wintel
+folder_access_request,Wintel,access PSI folder,Path,Grant permission,Wintel
+permission_change,Wintel,need read write access,Folder path,Modify permissions,Wintel
+monitoring_alert,Wintel,repeated disk alerts,Server name,Check monitoring logs,Wintel
+cpu_alert,Wintel,CPU usage high alert,Server name,Analyze processes,Wintel
+server_unreachable,Wintel,cannot access server,Server name,Check connectivity,Wintel
+agent_alert,Wintel,agent watcher alert,Server name,Restart agent service,Wintel
+critical_disk_issue,Wintel,disk critical alert,Server name,Free up space,Wintel
+vm_performance_issue,Wintel,VM is slow,VM name,Check resources,Wintel
+bulk_alerts,Wintel,multiple alerts triggered,Alert details,Investigate root cause,Wintel
+system_down,Wintel,system not reachable,Server name,Restart/check logs,Wintel
+storage_threshold,Wintel,disk threshold exceeded,Server name,Cleanup/extend disk,Wintel
+cpu_issue,Wintel,high CPU repeatedly,Server name,Monitor usage,Wintel
+connectivity_issue,Wintel,server unreachable,Server name,Network check,Wintel
+monitoring_issue,Wintel,SCOM alert triggered,Alert details,Check monitoring tool,Wintel
+system_access,Wintel,need system login,User details,Provide credentials/access,Wintel
+folder_permission_change,Wintel,change folder access,Path,Update permission,Wintel
+user_creation,Wintel,add new user,User details,Create account,Wintel
+account_creation,Wintel,create account,Details,Create account,Wintel
+app_access_request,Wintel,need application access,App name,Assign access,Wintel
+server_down,Wintel,server is not reachable,Server name,"Ping/RDP check, restart server",Wintel
+vm_down,Wintel,VM is down,VM name,"Check host, restart VM",Wintel
+cpu_high,Wintel,CPU usage is high,"Server name, CPU %","Identify process, restart service",Wintel
+memory_high,Wintel,memory usage is high,Server name,"Check memory usage, restart apps",Wintel
+disk_full,Wintel,disk is full,"Server name, drive",Cleanup logs/temp files,Wintel
+disk_alert,Wintel,disk usage above threshold,Server name,Analyze disk usage,Wintel
+service_down,Wintel,service is not running,"Server name, service",Restart service,Wintel
+application_down,Wintel,application not working on server,"Server name, app",Restart app/service,Wintel
+server_slow,Wintel,server is very slow,Server name,Check CPU/memory/disk,Wintel
+vm_performance,Wintel,VM performance is bad,VM name,Check resources allocation,Wintel
+backup_failure,Wintel,backup failed,Server name,Check backup logs,Wintel
+patching_issue,Wintel,patch installation failed,Server name,"Re-run patch, check logs",Wintel
+reboot_required,Wintel,server needs reboot,Server name,Schedule reboot,Wintel
+login_issue,Wintel,cannot login to server,"Server name, user",Check credentials/RDP,Wintel
+rdp_issue,Wintel,RDP not working,Server name,"Enable RDP, check firewall",Wintel
+dns_issue,Wintel,DNS not resolving,Server name,Check DNS config,Wintel
+network_issue,Wintel,server network issue,Server name,"Check NIC, ping test",Wintel
+disk_latency,Wintel,disk latency high,Server name,Check disk performance,Wintel
+cpu_spike,Wintel,sudden CPU spike,Server name,Analyze processes,Wintel
+memory_leak,Wintel,memory leak issue,Server name,Restart service/app,Wintel
+service_account_issue,Wintel,service account not working,Account name,Reset credentials,Wintel
+task_scheduler_issue,Wintel,scheduled task failed,Server name,Check task logs,Wintel
+event_log_error,Wintel,errors in event logs,Server name,Analyze logs,Wintel
+antivirus_issue,Wintel,antivirus blocking app,Server name,Whitelist application,Wintel
+disk_mount_issue,Wintel,drive not mounted,Server name,Mount drive,Wintel
+storage_issue,Wintel,storage not accessible,Server name,Check storage connection,Wintel
+vm_snapshot_issue,Wintel,snapshot failed,VM name,Check storage/space,Wintel
+hypervisor_issue,Wintel,host issue,Host name,Check hypervisor health,Wintel
+agent_issue,Wintel,monitoring agent down,Server name,Restart agent,Wintel
+alert_investigation,Wintel,alert triggered,Alert details,Check monitoring tool,Wintel
+user_access,Wintel,need server access,"User, server",Grant access,Wintel
+folder_access,Wintel,access to server folder,Path,Provide permission,Wintel
+share_issue,Wintel,shared drive not accessible,Path,Check share permissions,Wintel
+file_lock_issue,Wintel,file is locked,File name,Release lock,Wintel
+print_server_issue,Wintel,print server not working,Server name,Restart spooler,Wintel
+update_issue,Wintel,windows update failed,Server name,Retry update,Wintel
+certificate_issue,Wintel,certificate expired,Server name,Renew certificate,Wintel
+time_sync_issue,Wintel,time not syncing,Server name,Sync with NTP,Wintel
+gpo_issue,Wintel,GPO not applied,Server name,Run gpupdate,Wintel
+firewall_issue,Wintel,firewall blocking access,Server name,Update firewall rules,Wintel
+server_access_request,Wintel,need server access,"User, server name",Validate and grant access,Wintel
+folder_access_request,Wintel,need folder access,"Folder path, user",Provide permissions,Wintel
+server_usage_request,Wintel,need dev server access,Server name,Check availability,Wintel
+folder_access_request,Wintel,access to treasury folder,"Path, users",Grant access,Wintel
+network_config_change,Wintel,enable jumbo frames,"VLAN, device",Configure network settings,Wintel
+security_vulnerability,Wintel,zero-day vulnerability,System details,Patch/update system,Wintel
+network_access_request,Wintel,provide network access,User details,Grant access,Wintel
+software_missing,Wintel,MS Office missing,Server name,Install software,Wintel
+admin_access_request,Wintel,need admin rights,"Server, user",Grant admin access,Wintel
+vm_creation,Wintel,create VM,"Specs, user",Provision VM,Wintel
+backup_request,Wintel,backup excel file,File path,Perform backup,Wintel
+unknown_request,Wintel,CAR,Details,Clarify request,Wintel
+access_copy,Wintel,copy access for user,User details,Duplicate permissions,Wintel
+folder_access_request,Wintel,folder access required,Path,Grant permission,Wintel
+folder_access_request,Wintel,access to server folder,"Server, path",Grant access,Wintel
+vmware_access,Wintel,need vSphere access,"User, host",Provide access,Wintel
+server_access_request,Wintel,access to OPC server,Server name,Grant access,Wintel
+system_reactivation,Wintel,reactivate PC,Device name,Update/reactivate,Wintel
+file_transfer,Wintel,copy files between servers,"Source, destination",Perform transfer,Wintel
+drive_access,Wintel,U drive access,User,Grant access,Wintel
+access_issue,Wintel,user not found in system,User details,Create/validate user,Wintel
+dns_configuration,Wintel,configure DNS,DNS name,Update DNS,Wintel
+folder_access_request,Wintel,read access to folder,"Path, user",Grant access,Wintel
+drive_property_change,Wintel,remove drive property,Drive,Modify settings,Wintel
+dns_removal,Wintel,remove DNS config,DNS name,Delete entry,Wintel
+planned_maintenance,Wintel,technical shutdown,Site,Notify and monitor,Wintel
+server_project,Wintel,SIAC request,Details,Handle project,Wintel
+vm_creation,Wintel,allocate VM,Specs,Create VM,Wintel
+dns_configuration,Wintel,private DNS config,DNS name,Configure DNS,Wintel
+vm_creation,Wintel,new VM request,Specs,Create VM,Wintel
+vm_creation,Wintel,VM for user,Specs,Provision VM,Wintel
+vm_creation,Wintel,need VM box,Specs,Allocate VM,Wintel
+software_installation,Wintel,install ShareGate,Server,Install software,Wintel
+service_account_creation,Wintel,create service account,"Name, purpose",Create account,Wintel
+dns_configuration,Wintel,DNS config for plant,DNS details,Configure DNS,Wintel
+dns_configuration,Wintel,DNS multiple sites,DNS info,Configure DNS,Wintel
+network_folder_issue,Wintel,cannot find network folder,Path,Verify mapping,Wintel
+vm_creation,Wintel,new VM request,Specs,Provision VM,Wintel
+server_decommission,Wintel,decommission SharePoint,Server,Decommission,Wintel
+disk_space_increase,Wintel,increase drive space,"Server, drive",Extend disk,Wintel
+folder_access_request,Wintel,folder access for user,Path,Grant access,Wintel
+drive_access,Wintel,network drive access,User,Grant access,Wintel
+folder_access_request,Wintel,access training folder,Path,Grant permission,Wintel
+vm_creation,Wintel,VM for testing,Specs,Create VM,Wintel
+folder_access_request,Wintel,shared folder access,Path,Grant access,Wintel
+folder_access_request,Wintel,folder access needed,Path,Provide access,Wintel
+vm_creation,Wintel,new VM request,Specs,Provision VM,Wintel
+sql_account_creation,Wintel,create SQL account,"Server, user",Create account,Wintel
+vm_creation,Wintel,allocate VM,Specs,Create VM,Wintel
+service_account_creation,Wintel,create service account,Details,Create account,Wintel
+folder_access_request,Wintel,RW access required,Path,Grant permission,Wintel
+server_decommission,Wintel,decommission server,Server name,Decommission,Wintel
+admin_access_request,Wintel,admin access required,"Server, user",Grant admin,Wintel
+folder_access_issue,Wintel,cannot access folder,Path,Check permission,Wintel
+server_build,Wintel,build Kafka server,Specs,Deploy server,Wintel
+server_build,Wintel,build Grafana server,Specs,Deploy server,Wintel
+drive_access,Wintel,full drive access,User,Grant access,Wintel
+access_removal,Wintel,remove folder access,"User, path",Remove permission,Wintel
+certificate_request,Wintel,assign certificate,User/group,Deploy certificate,Wintel
+folder_access_request,Wintel,access public folder,Path,Grant access,Wintel
+service_account_creation,Wintel,create service account,Details,Create account,Wintel
+vm_decommission,Wintel,decommission VMs,VM list,Remove VMs,Wintel
+vm_decommission,Wintel,cleanup VMs,VM list,Remove resources,Wintel
+server_upgrade,Wintel,upgrade server,Server name,Upgrade system,Wintel
+file_restore,Wintel,restore file,File path,Restore backup,Wintel
+software_installation,Wintel,install .NET bundle,Server,Install software,Wintel
+software_installation,Wintel,install ShareGate,Server,Install,Wintel
+server_access_request,Wintel,server access required,User,Grant access,Wintel
+folder_access_request,Wintel,folder access,Path,Grant access,Wintel
+file_restore,Wintel,restore file,File name,Restore,Wintel
+application_access,Wintel,safety observations access,User,Grant access,Wintel
+folder_access_request,Wintel,access PSI folder,Path,Grant access,Wintel
+drive_access,Wintel,U drive access,User,Provide access,Wintel
+server_decommission,Wintel,decommission server,Server,Decommission,Wintel
+folder_access_request,Wintel,folder access,Path,Grant access,Wintel
+access_clone,Wintel,same access as user,Reference user,Copy permissions,Wintel
+service_account_creation,Wintel,create service account,Details,Create account,Wintel
+password_reset,Wintel,reset password,Server/user,Reset password,Wintel
+rdp_issue,Wintel,RDP not working,"IP, user",Check connectivity,Wintel
+folder_access_request,Wintel,folder access,Path,Grant access,Wintel
+folder_access_modify,Wintel,modify access,Path,Update permission,Wintel
+service_account_disable,Wintel,disable service account,Account,Disable account,Wintel
+file_restore,Wintel,restore file,File,Restore backup,Wintel
+folder_access_request,Wintel,access workgroup folder,Path,Grant access,Wintel
+folder_access_request,Wintel,RW access public folder,Path,Grant access,Wintel
+network_boot_issue,Wintel,PXE boot issue,Device,Check config,Wintel
+file_restore,Wintel,restore file,File,Restore,Wintel
+folder_access_request,Wintel,new employee folder access,"User, path",Grant access,Wintel
+service_account_disable,Wintel,remove service account,Account,Disable account,Wintel
+license_request,Asset Management,Need Teams Pro license for meeting room,"User name, license type, urgency","Check license availability, assign license",Asset Team
+info_request,Asset Management,About EMEA approval copilot,"User details, request details",Provide info or documentation,Asset Team
+software_access,Asset Management,Need access to AutoCAD LT,"User name, software version","Check license, assign access",Asset Team
+software_install,Asset Management,Need Adobe Acrobat,"User name, device","Install software, assign license",Asset Team
+license_update,Asset Management,Adobe license has been changed,"User name, license details",Verify license update,Asset Team
+license_assignment,Asset Management,Assign additional licenses,"User name, license type",Assign license in portal,Asset Team
+hardware_request,Asset Management,Assign hardware to user,"User details, asset type",Allocate hardware,Asset Team
+license_assignment,Asset Management,Assign license for user,"User details, license type",Assign license,Asset Team
+software_request,Asset Management,Need AutoCAD software,User details,"Verify license, install",Asset Team
+software_issue,Asset Management,Unable to login AutoCAD Electrical,"User details, error",Check license & login issue,Asset Team
+license_request,Asset Management,AutoCAD license request,User details,Assign license,Asset Team
+license_issue,Asset Management,AutoCAD LT subscription lost,User details,"Check subscription, reassign",Asset Team
+software_request,Asset Management,Need CAD drawing software,User details,Suggest & install software,Asset Team
+license_request,Asset Management,Need Copilot access,User details,Assign Copilot license,Asset Team
+license_request,Asset Management,Need Copilot for Outlook,User details,Assign license,Asset Team
+license_request,Asset Management,Copilot business license required,User details,Assign license,Asset Team
+license_request,Asset Management,Copilot license for multiple users,User list,Assign licenses,Asset Team
+license_upgrade,Asset Management,Copilot upgrade required,User details,Upgrade license,Asset Team
+license_upgrade,Asset Management,Copilot upgrade please,User details,Upgrade license,Asset Team
+software_install,Asset Management,Install Copilot Pro,"User details, device",Install & activate,Asset Team
+software_request,Asset Management,Need MS Project and Planner,User details,"Assign license, install",Asset Team
+software_request,Asset Management,Need MS Project,User details,Assign license,Asset Team
+software_issue,Asset Management,Error in Autodesk App,"Error details, user",Troubleshoot app issue,Asset Team
+access_request,Asset Management,Need Flexera access,User details,Provide access,Asset Team
+access_request,Asset Management,Flexera access for new users,User list,Grant access,Asset Team
+procurement,Asset Management,PO to process,PO details,Process request,Asset Team
+license_request,Asset Management,Need Power BI Premium license,User details,Assign license,Asset Team
+software_request,Asset Management,Need project management software,User details,"Suggest tool, assign license",Asset Team
+license_request,Asset Management,Need MS Project license,User details,Assign license,Asset Team
+license_request,Asset Management,Need Visio full version,User details,Assign license,Asset Team
+license_request,Asset Management,Need Power BI Pro license,User details,Assign license,Asset Team
+quotation_request,Asset Management,Quote for wireless equipment,Requirement details,Share quotation,Asset Team
+software_request,Asset Management,Need PDF editor,User details,Install software,Asset Team
+license_request,Asset Management,Need Photoshop & Illustrator license,User details,Assign license,Asset Team
+access_request,Asset Management,Need Power BI access,User details,Grant access,Asset Team
+license_issue,Asset Management,Power BI Premium capacity issue,Error details,Check capacity & license,Asset Team
+software_issue,Asset Management,AutoCAD Inventor issue,Error details,Troubleshoot software,Asset Team
+access_request,Asset Management,Need admin portal access,User details,Grant access,Asset Team
+quotation_request,Asset Management,Quote for new hardware,Requirement details,Provide quotation,Asset Team
+license_request,Asset Management,Request for Copilot Premium,User details,Assign license,Asset Team
+license_request,Asset Management,Need Workfront license,User details,Assign license,Asset Team
+kerberos_key_rollover,Azure,Roll over Kerberos decryption key for SSO,Server/Account details,Execute key rollover procedure,Azure Team
+certificate_renewal,Azure,Renew SSL Inspect certificate,"Certificate details, scope",Renew & deploy certificate,Azure Team
+app_registration,Azure,Azure AD App Registration for Performance Hub,App details,Create app registration,Azure Team
+certificate_deployment,Azure,Push certificate to all machines,"Certificate details, target devices",Deploy via GPO/Intune,Azure Team
+kerberos_key_rollover,Azure,Roll over Kerberos key AZUREADSSOACC,Account details,Perform rollover,Azure Team
+kerberos_key_renewal,Azure,Kerberos Key Renewal for Azure SSO,Account details,Renew Kerberos key,Azure Team
+gpo_update,Azure,Amend Bitwarden GPO setting,GPO details,Modify group policy,Azure Team
+gpo_update,Azure,Update WiFi GPO for Radius servers,GPO details,Modify configuration,Azure Team
+dns_configuration,Azure,Create DNS records for Grafana,"DNS name, IP",Add DNS entries,Azure Team
+gpo_update,Azure,Update Chrome browser GPO,GPO details,Modify policy,Azure Team
+gpo_removal,Azure,Remove Bitwarden GPO,GPO details,Remove policy,Azure Team
+kerberos_key_renewal,Azure,Kerberos renewal process,Account details,Renew key,Azure Team
+kerberos_key_rollover,Azure,Roll over Kerberos SSO account,Account details,Execute rollover,Azure Team
+ad_cleanup,Azure,Remove unused AD groups,Group details,Delete unused groups,Azure Team
+ad_cleanup,Azure,Cleanup weak/dormant AD accounts,Account list,Disable/remove accounts,Azure Team
+ad_cleanup,Azure,Remove unused AD security groups,Group details,Delete groups,Azure Team
+certificate_cleanup,Azure,Delete expired certificate from GPO,Certificate details,Remove from GPO,Azure Team
+testing,Azure,Post implementation testing,Change details,Validate implementation,Azure Team
+implementation,Azure,Implement change,Change details,Execute implementation,Azure Team
+ad_group_creation,Azure,Create AD security group for VM,"Group name, users",Create group,Azure Team
+access_coordination,Azure,Coordinate admin access for VM,User details,Check user eligibility ? Get approval from manager/application owner ? Verify AD group ? Add user to required Performance Hub AD group ? Ask user to re-login and validate access,Azure Team
+testing,Azure,Post implementation testing,Change details,Validate changes,Azure Team
+implementation,Azure,Implement change,Change details,Execute change,Azure Team
+testing,Azure,Post implementation testing,Change details,Validate system,Azure Team
+implementation,Azure,Implement change,Change details,Execute task,Azure Team
+testing,Azure,Post implementation testing,Change details,Validate,Azure Team
+implementation,Azure,Implement change,Change details,Execute,Azure Team
+access_request,Azure,Performance Hub access request,User details,Check user eligibility ? Get approval from manager/application owner ? Verify AD group ? Add user to required Performance Hub AD group ? Ask user to re-login and validate access,Azure Team
+application_unblock,Azure,Unblock PSI Chrome extension,User/device details,Whitelist extension,Azure Team
+gpo_update,Azure,Change URL in GPO shortcut,Old/New URL,Update GPO,Azure Team
+access_request,Azure,Performance Hub access,User details,Check user eligibility ? Get approval from manager/application owner ? Verify AD group ? Add user to required Performance Hub AD group ? Ask user to re-login and validate access,Azure Team
+sso_configuration,Azure,Esko SSO Azure sign-on issue,App/user details,Configure SSO,Azure Team
+application_setup,Azure,NOTIF application implementation,App details,Deploy application,Azure Team
+certificate_renewal,Azure,Renew certificates,Certificate details,Renew & deploy,Azure Team
+access_request,Azure,Provide PerformanceHub access,User list,Check user eligibility ? Get approval from manager/application owner ? Verify AD group ? Add user to required Performance Hub AD group ? Ask user to re-login and validate access,Azure Team
+vm_creation,Azure,Create new Azure VM for IIS,VM specs,Deploy VM,Azure Team
+access_request,Azure,Performance Hub access,User details,Check user eligibility ? Get approval from manager/application owner ? Verify AD group ? Add user to required Performance Hub AD group ? Ask user to re-login and validate access,Azure Team
+access_request,Azure,Azure subscription access request,"User name, subscription, justification",Verify access ? Get approval ? Assign RBAC role,Azure Team
+secret_renewal,Azure,App registration secret expiry,"App name, expiry details",Generate new secret ? Update app config,Azure Team
+access_request,Azure,Access to People section in Performance Hub,User details,Get approval ? Add to AD group ? Validate access,Azure Team
+gpo_removal,Azure,Remove Bitwarden POC,GPO details,Remove policy from GPO,Azure Team
+user_update,Azure,Change username to correct one,User details,Update AD/Azure username,Azure Team
+application_access,Azure,Need Workday access,User details,Assign role/license ? Validate login,Azure Team
+certificate_request,Azure,Certificate for Nong Khae TCP,Certificate details,Generate & deploy certificate,Azure Team
+certificate_deployment,Azure,Push certificate to all machines,"Certificate, target scope",Deploy via GPO/Intune,Azure Team
+gpo_update,Azure,Add NPS servers to WiFi GPO,Server details,Update GPO settings,Azure Team
+ad_cleanup,Azure,Cleanup weak/dormant AD accounts,Account list,Disable/remove accounts,Azure Team
+server_action,Azure,Clear server memory,Server details,Perform cleanup/reset,Azure Team
+application_access,Azure,CMMS Control Tower access,User details,Check user eligibility ? Get approval from manager/application owner ? Verify AD group ? Add user to required Performance Hub AD group ? Ask user to re-login and validate access,Azure Team
+application_access,Azure,CMMS access,User details,Check user eligibility ? Get approval from manager/application owner ? Verify AD group ? Add user to required Performance Hub AD group ? Ask user to re-login and validate access,Azure Team
+application_access,Azure,CMMS dashboard access,User details,Check user eligibility ? Get approval from manager/application owner ? Verify AD group ? Add user to required Performance Hub AD group ? Ask user to re-login and validate access,Azure Team
+access_request,Azure,CMMS KPI access via Performance Hub,User details,Approval ? Add to group ? Validate,Azure Team
+access_request,Azure,Coil Performance Hub access,User details,Approval ? Add to group ? Validate,Azure Team
+application_access,Azure,Control Tower access,User details,Grant access,Azure Team
+application_issue,Azure,Control Tower access issue,"User details, error",Check role ? Fix permissions,Azure Team
+access_coordination,Azure,Local admin access for VM,"User, VM details",Verify approval ? Grant access,Azure Team
+data_update,Azure,Correct organizational chart,User/Org details,Update system data,Azure Team
+gpo_update,Azure,Change URL in GPO shortcut,Old/New URL,Update GPO,Azure Team
+ad_group_creation,Azure,Create AD group for Azure VM,"Group name, users",Create & assign group,Azure Team
+ad_sync,Azure,Initiate AD push from ServiceNow,User/group details,Trigger sync job,Azure Team
+access_request,Azure,Temporary CROWN_OFFICE access,"User details, duration",Grant temporary access,Azure Team
+certificate_cleanup,Azure,Delete expired certificate from GPO,Certificate details,Remove from GPO,Azure Team
+ou_cleanup,Azure,Delete Microland OU,OU details,Remove OU after validation,Azure Team
+vm_deployment,Azure,Deploy new Azure VM,VM specs,Create & configure VM,Azure Team
+security_configuration,Azure,Disable public access to storage,Storage account,Update security settings,Azure Team
+dns_configuration,Azure,Add DNS entry,"DNS name, IP",Create DNS record,Azure Team
+infrastructure_setup,Azure,DR resource build for QA,Environment details,Deploy DR resources,Azure Team
+application_access,Azure,Energy Excellence access,User details,Grant access,Azure Team
+sso_configuration,Azure,Esko SSO Azure sign-on,App/user details,Configure SSO,Azure Team
+role_assignment,Azure,Exchange role assignment request,"User, role",Assign role in Exchange,Azure Team
+extension_issue,Azure,Chrome extension issue,User/device,Check policy ? Reinstall/allow,Azure Team
+access_request,Azure,Access Performance Hub,User details,Approval ? Add to group ? Validate,Azure Team
+access_request,Azure,Performance Hub spares module access,User details,Approval ? Add to group ? Validate,Azure Team
+extension_management,Azure,Bitwarden Chrome extension,User/device,Install/remove extension,Azure Team
+account_creation,Azure,SharePoint accounts for Industry 4.0,User list,Create accounts,Azure Team
+ad_update,Azure,Rename AD group,Group details,Update group name,Azure Team
+access_request,Azure,New hire Azure access,User details,Approval ? Assign access,Azure Team
+subscription_creation,Azure,New Azure subscription for Vision APAC,"Subscription name, business justification",Validate request ? Get approval ? Create subscription,Azure Team
+vm_creation,Azure,New Azure VM for IIS,"VM specs, owner details",Validate requirements ? Create VM ? Assign access,Azure Team
+contractor_access,Azure,New contractor access required,"Contractor details, duration, manager approval",Verify approval ? Create account/access,Azure Team
+vm_creation,Azure,New VM request for Performance Hub Prod,"VM specs, environment details",Create VM and configure environment,Azure Team
+database_access_issue,Azure,Unable to access Azure SQL database,"User details, DB name, error screenshot",Check firewall/access rules ? Verify permissions,Azure Team
+application_implementation,Azure,NOTIF application implementation,"App details, deployment info",Deploy application and validate,Azure Team
+gateway_access,Azure,SQL server gateway DB access,User/account details,Verify gateway permissions ? Grant access,Azure Team
+browser_exception,Azure,Password manager exception in Chrome,User/device details,Update browser/GPO exception settings,Azure Team
+application_access,Azure,Permission to Vision Global App,"User details, access level",Verify approval ? Assign app role,Azure Team
+certificate_deployment,Azure,Push certificate to all machines,"Certificate details, device scope",Deploy certificate via GPO/Intune,Azure Team
+access_request,Azure,PH Dev access request,User details,Approval ? Add required group ? Validate login,Azure Team
+testing,Azure,Post implementation testing,Change details,Perform validation after implementation,Azure Team
+resource_access,Azure,Access to resource in IBP / Perf Hub,"User details, module name",Verify role ? Grant access,Azure Team
+access_request,Azure,Performance Hub access request,User details,Get approval ? Add required group in ticket ? Validate access,Azure Team
+analytics_access,Azure,Need Sales Analysis access,User details,Verify approval ? Assign access role,Azure Team
+module_access,Azure,Sustainability module access in Performance Hub,"User details, module",Add module permissions,Azure Team
+mailbox_access,Azure,Mailbox access request,"User details, mailbox name",Verify approval ? Grant mailbox permission,Azure Team
+module_access,Azure,Quality module access for Sevilla,User details,Assign module access,Azure Team
+analysis_request,Azure,RC4/WeakPW/Dormant account analysis,Scope details,Run AD analysis and report findings,Azure Team
+certificate_renewal,Azure,Microsoft certificate renewal,Certificate details,Renew certificate and deploy,Azure Team
+group_removal,Azure,Removal from deny group,User/group details,Remove user after approval,Azure Team
+gpo_removal,Azure,Remove Bitwarden / Eviosys GPO,GPO details,Remove policy and validate,Azure Team
+ad_cleanup,Azure,Remove unused AD groups,Group details,Validate no dependencies ? Remove groups,Azure Team
+password_policy_change,Azure,Set permanent password / disable 2FA,"Account details, approval",Verify exception approval ? Update settings,Azure Team
+sharepoint_access,Azure,Request SharePoint access,"User details, site URL",Verify approval ? Grant access,Azure Team
+keyvault_access,Azure,Azure Key Vault access request,"User details, vault name",Verify RBAC ? Grant access,Azure Team
+app_registration,Azure,Azure AD App Registration for Performance Hub,App details,Create app registration,Azure Team
+onedrive_access,Azure,OneDrive access for Power Automate,User/app details,Grant API/OneDrive permissions,Azure Team
+subscription_access,Azure,Access to Industry 4.0 subscription,User details,Assign RBAC role,Azure Team
+information_request,Azure,Request employee email addresses,Scope/business reason,Validate request ? Share approved info,Azure Team
+dns_configuration,Azure,Private DNS settings for Grafana servers,"DNS details, server names",Create/update DNS settings,Azure Team
+app_proxy_update,Azure,Update Azure App Proxy mapping,"App details, mapping info",Update proxy configuration,Azure Team
+group_membership,Azure,Add user to Entra group,"User details, group name",Verify approval ? Add member,Azure Team
+exchange_role_assignment,Azure,Assign exchange roles and SMTP access,"User details, role needed",Verify approval ? Assign role,Azure Team
+security_group_creation,Azure,Create Entra ID security group for app access,"Group details, members",Create group and assign members,Azure Team
+entra_group_creation,Azure,Create new Entra groups for Performance Hub,Group details,Create groups and validate sync,Azure Team
+directory_data_request,Azure,Extract AD IDs for users,User list,Export requested AD IDs securely,Azure Team
+software_installation,Azure,Request to install software,"Software name, device",Verify approval ? Install software,Azure Team
+extension_unblock,Azure,Unblock PSI Chrome extension,User/device details,Check GPO/browser policy ? Unblock extension,Azure Team
+sso_configuration,Azure,Build SSO configuration for payroll portal,"App details, SSO requirements",Configure SAML/OAuth/SSO integration,Azure Team
+sentinel_installation,Endpoint Security,Sentinel One Installation,"Device name, OS type, user name","Check device connectivity, verify existing AV conflicts, install S1 agent, confirm agent status online",ITC - Cyber Security
+sentinel_popup_alert,Endpoint Security,Sentinel popup on NES202-348614,"Device name, popup screenshot, user details","Verify alert type in SentinelOne console, check if false positive, isolate if malicious",ITC - Cyber Security
+security_agent_disabled,Endpoint Security,SentinelOne Agent Security Agent Disabled,"Device name, site/location, screenshot","Check S1 service status, restart agent service, verify tamper protection",ITC - Cyber Security
+ssh_port_request,Firewall / Security,SSH open on mailhost1.eur.crowncork.com,"Server name, port details, business justification","Validate SSH requirement, confirm firewall rule, check security approval",ITC - Cyber Security
+security_concern,Security Incident,Re: IT concern,"User details, issue description, screenshots","Analyze reported concern, identify impact, escalate if security breach suspected",ITC - Cyber Security
+email_not_received,Email Security,No Internal Emails being received,"Affected users, sender details, timestamps","Check mail flow, Proofpoint quarantine, Exchange message trace",ITC - Cyber Security
+malware_alert,Endpoint Security,Sentinel ONE alert - TPnet.exe / PesadasEmail.exe,"Device name, alert screenshot","Review S1 threat details, quarantine malicious file, scan endpoint",ITC - Cyber Security
+smartsheet_access,Application Access,Smartsheet Access,"User name, email ID, required role","Verify approval, assign Smartsheet access/license",ITC - Cyber Security
+internet_allow_group,Internet Access,Add my Z account into GEUR-ap-GCXInternetAllow,"User ID, manager approval","Verify business justification, add user to internet allow AD group",ITC - Cyber Security
+internet_blocked,Network Security,No internet access,"Device name, network type, affected sites","Check proxy/firewall restrictions, verify internet policy",ITC - Cyber Security
+service_account_change,Service Account,Need a change in service account,"Service account name, requested changes","Validate approvals, update service account permissions/settings",ITC - Cyber Security
+blocked_download_access,Web Access,Need to access a link to download a PDF file,"URL, screenshot, business reason","Verify URL reputation, whitelist if approved",ITC - Cyber Security
+application_access,Application Access,Need access to RUBIX,"User ID, manager approval","Verify entitlement, grant application access",ITC - Cyber Security
+software_installation,Software Installation,New software installation request,"Software name, version, business need",Verify software approval/security compliance before install,ITC - Cyber Security
+temporary_unrestricted_access,Internet Exception,Temporary Unrestricted Internet Access,"User details, duration, approval","Validate approval, add temporary unrestricted access policy",ITC - Cyber Security
+domain_rejoin,Endpoint Security,OLD PC CROWN DOMAIN BACK TO SECURITY SERVER,"Device details, issue description","Verify domain trust, rejoin domain, reinstall security tools if needed",ITC - Cyber Security
+sentinel_linux_install,Endpoint Security,Sentinel one Linux Agent Uninstall and Install,"Linux server details, OS version","Remove existing agent cleanly, reinstall latest Linux S1 agent",ITC - Cyber Security
+sentinel_install_device,Endpoint Security,Install SentinelOne on NES223-321912,"Device name, user details","Verify compatibility, install S1, confirm active protection",ITC - Cyber Security
+powerbi_installation,Software Installation,Power BI desktop app installation,User device details,"Verify installation rights, install approved Power BI version",ITC - Cyber Security
+server_onboarding,Server Security,New Servers,"Server details, IP, OS type","Ensure hardening checklist, install security agents, apply baseline policies",ITC - Cyber Security
+document_review,Security Review,Document,"Document details, purpose",Review attached document for security/compliance concerns,ITC - Cyber Security
+website_blocked,URL Access,https://www.herrco.gr/ not accessible,"URL, screenshot, user details","Check proxy/firewall logs, validate site reputation, whitelist if safe",ITC - Cyber Security
+download_release,Download Restriction,Download blocked - NEBOSH exam,"URL/file details, screenshot","Verify file safety, release blocked download if compliant",ITC - Cyber Security
+uniflow_access,Secure Printing,uniFLOW Online PIN,"User ID, printer details","Reset/reissue PIN, verify uniFLOW account sync",ITC - Cyber Security
+remote_application_access,Remote Access,using a remote application,"Application name, remote access method",Verify remote app permissions and VPN requirements,ITC - Cyber Security
+password_reset,Credential Management,Password Reset for user Martin.MULLINS,"User ID, identity verification","Reset password, confirm MFA/lockout status",ITC - Cyber Security
+navigator_access,Application Access,Request for access to Read Meeting Navigator,"User details, approval",Verify approval and grant navigator access,ITC - Cyber Security
+account_creation,Account Management,Create Account,"User details, role, approvals",Create account and apply required security groups,ITC - Cyber Security
+service_account_onboarding,Service Account,onboard service account sDBO-Europe,"Service account details, owner approval","Create service account, apply policies and permissions",ITC - Cyber Security
+vpn_access,VPN / BeyondTrust,provide VPN Access (Beyond Trust),"User details, business justification","Verify approval, assign BeyondTrust/VPN access",ITC - Cyber Security
+website_unblock,URL Whitelist,Request to Unblock Website  Hotel Reservation,"URL, business reason",Verify site safety and whitelist if approved,ITC - Cyber Security
+website_access_request,URL Access,Request Access to www.renold.com,"URL, justification",Validate website category and allow access if safe,ITC - Cyber Security
+beyondtrust_server_add,Privileged Access,add VM VUK629-123046 to Beyond trust,"VM/server name, owner details","Verify onboarding approval, add server into BeyondTrust",ITC - Cyber Security
+website_release,Web Security,Website is isolated/blocked,"URL, screenshot","Check Proofpoint isolation logs, release if safe",ITC - Cyber Security
+proofpoint_block,Email/Web Security,Proofpoint is denying access to a website,"URL, screenshot, business reason",Review Proofpoint policy and whitelist if approved,ITC - Cyber Security
+vulnerability_management,Security Vulnerability,Log4J vulnerabilities,Affected servers/apps,"Identify impacted systems, patch vulnerable components",ITC - Cyber Security
+restricted_software_install,Software Installation,Installation request for Logitech G-HUB,"Software details, business justification",Validate software against security policy before install,ITC - Cyber Security
+quarantine_release,Email Security,Release Quarantined email,"Sender/recipient details, subject",Review Proofpoint quarantine and release if safe,ITC - Cyber Security
+engineering_software_install,Software Installation,MADe - Maintenance Aware Design Ecosystem install,"Software details, approval",Verify software source and install securely,ITC - Cyber Security
+mac_app_install,Software Installation,Install rectangle app,"Device details, approval",Validate app security and install if compliant,ITC - Cyber Security
+linux_s1_deployment,Endpoint Security,S1 installation Linux A628UK120,"Server name, Linux version",Install SentinelOne Linux agent and verify connectivity,ITC - Cyber Security
+vendor_website_whitelist,URL Whitelist,Allow PPE vendor website,"Website URL, business justification",Validate website reputation and whitelist,ITC - Cyber Security
+sentinel_uninstall,Endpoint Security,Please uninstall Sentinel one-S1,"Device details, approval",Verify approval and safely uninstall S1 agent,ITC - Cyber Security
+url_whitelist_request,URL Whitelist,Add URL to Whitelist User ZAMPAKOU,"URL, business reason",Verify URL safety and update whitelist policy,ITC - Cyber Security
+social_media_access,Internet Exception,require access to social media channels,"User details, requested sites",Verify approval and enable controlled access,ITC - Cyber Security
+secure_user_setup,User Setup,New User (Divya) set up,"User details, required access","Create accounts, apply security policies, assign permissions",ITC - Cyber Security
+government_portal_access,Secure Website Access,Access required to Government Portal,"Portal URL, user details",Verify business requirement and whitelist portal,ITC - Cyber Security
+authentication_change,Authentication Management,Authentication Changes - OneDrive Migration Accounts,"Account details, migration scope",Verify authentication method and update access settings,ITC - Cyber Security
+application_access_request,Application Access,accessing the Vision page,"User details, business justification",Validate access approval and update application permissions,ITC - Cyber Security
+endpoint_protection_install,Endpoint Security,Sentinel One Installation,"Device name, OS type, user details","Verify device connectivity, check existing AV conflicts, install/update SentinelOne agent",ITC - Cyber Security
+endpoint_protection_alert,Endpoint Security,Sentinel popup / Security Agent Disabled,"Device name, screenshot, alert details","Review alert in S1 console, restart services, isolate endpoint if malicious",ITC - Cyber Security
+privileged_access_request,Privileged Access,Add VM to BeyondTrust,"Server/VM name, business justification, approval","Verify approvals, onboard server into BeyondTrust",ITC - Cyber Security
+vpn_access_request,Remote Access,Provide VPN Access (Beyond Trust),"User details, manager approval, access duration",Validate VPN entitlement and assign secure remote access,ITC - Cyber Security
+software_installation_request,Software Security,New software installation request,"Software name, version, business reason",Verify software compliance and approve installation,ITC - Cyber Security
+restricted_software_install,Software Security,Install Logitech G-HUB / Rectangle App,"Device details, software source, approval",Validate software risk and whitelist/install if compliant,ITC - Cyber Security
+linux_security_agent,Endpoint Security,S1 installation Linux A628UK120,"Linux server name, OS version","Remove old agent if needed, install latest S1 Linux package",ITC - Cyber Security
+security_agent_removal,Endpoint Security,Please uninstall Sentinel one-S1,"Device name, approval details",Verify uninstall approval and remove agent safely,ITC - Cyber Security
+malware_detection,Threat Management,Sentinel ONE alert - TPnet.exe,"Device name, threat screenshot","Analyze threat, quarantine malicious files, run endpoint scan",ITC - Cyber Security
+vulnerability_management,Vulnerability Management,Log4J vulnerabilities,"Affected systems, application details",Identify vulnerable servers/apps and apply patches,ITC - Cyber Security
+website_access_request,Web Access,Request access to blocked website,"URL, business justification, screenshot",Verify URL reputation and whitelist if approved,ITC - Cyber Security
+internet_access_exception,Internet Access,Temporary Unrestricted Internet Access,"User details, approval, duration",Validate approval and apply temporary unrestricted policy,ITC - Cyber Security
+social_media_access,Internet Access,Require access to social media channels,"Requested sites, business reason, approval",Verify business need and allow approved platforms,ITC - Cyber Security
+download_release_request,Secure Download,Download blocked - NEBOSH exam,"File/URL details, screenshot",Verify file safety and release blocked download if safe,ITC - Cyber Security
+proofpoint_release,Email Security,Release quarantined email,"Sender, recipient, email subject",Check quarantine policy and release if legitimate,ITC - Cyber Security
+email_delivery_issue,Email Security,No Internal Emails being received,"Affected users, timestamps, sender details",Perform message trace and verify mail flow/security filtering,ITC - Cyber Security
+web_filter_exception,Web Security,Proofpoint denying access to website,"URL, screenshot, business justification",Review web filter logs and whitelist safe websites,ITC - Cyber Security
+account_creation,Identity Management,Create Account,"User details, role, approvals",Create secure account and assign required permissions,ITC - Cyber Security
+service_account_management,Service Account,onboard service account sDBO-Europe,"Service account details, owner approval",Create/update service account with least privilege access,ITC - Cyber Security
+password_reset,Credential Management,Password Reset for user,"User ID, verification details",Reset password and verify MFA/account lock status,ITC - Cyber Security
+authentication_change,Authentication Security,Authentication Changes - OneDrive Migration Accounts,"Account details, migration scope",Update authentication settings and validate access,ITC - Cyber Security
+application_access_request,Application Access,Need access to RUBIX / Vision page,"User details, approval, application name",Verify entitlement and assign application permissions,ITC - Cyber Security
+smartsheet_access,SaaS Access,Smartsheet Access,"User email, access level",Verify approval and assign Smartsheet role/license,ITC - Cyber Security
+government_portal_access,Secure Portal Access,Access required to Government Portal,"Portal URL, user details",Validate access request and whitelist portal if approved,ITC - Cyber Security
+remote_application_access,Remote Access,using a remote application,"Application name, access method",Verify VPN/remote app permissions and connectivity,ITC - Cyber Security
+secure_print_access,Print Security,uniFLOW Online PIN,"User details, printer/site details",Reset/reissue PIN and validate uniFLOW sync,ITC - Cyber Security
+security_server_rejoin,Endpoint Security,OLD PC CROWN DOMAIN BACK TO SECURITY SERVER,"Device name, issue details",Rejoin device to domain and validate security policies,ITC - Cyber Security
+server_security_onboarding,Server Security,New Servers,"Server name, OS, IP details",Apply hardening standards and install security agents,ITC - Cyber Security
+certificate_or_ssh_request,Secure Connectivity,SSH open on mailhost / certificate requests,"Server details, port/certificate details",Verify firewall/security approval before implementation,ITC - Cyber Security
+generic_security_concern,Security Incident,Re: IT concern,"Incident details, screenshots, affected users",Analyze security impact and escalate if needed,ITC - Cyber Security
+windows_upgrade,SCCM,Win 10 to Win 11 Feature Update,"Device name, user name, upgrade version","Check device compatibility, verify SCCM deployment collection, push upgrade task sequence",SCCM Team
+task_sequence_update,SCCM,Latest Win 11 Task Sequence - DELL Drivers,"Device model, driver package details","Validate driver package, update SCCM task sequence, test deployment",SCCM Team
+software_packaging,SCCM,Create SAP GUI v8 package for Software Center,"Software package, version, deployment scope","Create SCCM package/application, test installation, deploy via Software Center",SCCM Team
+missing_software,SCCM,New PC does not have software,"Device name, missing software list","Verify SCCM client health, trigger software deployment",SCCM Team
+minitab_installation,SCCM,Minitab required,"User/device details, license approval","Verify license availability, deploy Minitab package",SCCM Team
+visio_installation,SCCM,Visio installation,"User name, device name, version required","Verify Visio license, deploy application from SCCM",SCCM Team
+office_installation,SCCM,Deploy Office 365 32-bit,"Device name, Office version","Validate architecture compatibility, deploy Office package",SCCM Team
+network_join,SCCM,Add machine into Crown network,"Device name, MAC address",Verify SCCM client and AD join status,SCCM Team
+software_center_issue,SCCM,Can't install applications by Software Center,"Device name, error screenshot","Check SCCM client service, repair Software Center cache",SCCM Team
+autocad_installation,SCCM,Install AutoCAD,"Device name, AutoCAD version, approval","Verify AutoCAD license, deploy application",SCCM Team
+device_removal_sccm,SCCM,Remove device from SCCM,Device name,"Validate device object, remove from SCCM collections",SCCM Team
+sccm_report_access,SCCM,SCCM report access required,"User ID, manager approval",Provide SCCM reporting role/group access,SCCM Team
+copilot_package,SCCM,Create SCCM package for MS Copilot,"Software source, deployment scope",Package application and deploy through SCCM,SCCM Team
+heic_reader_install,SCCM,HEIC reader installer,Device details,Deploy HEIC extension package via SCCM,SCCM Team
+sccm_remote_control,SCCM,SCCM Remote Control,"Device name, user approval",Verify remote tools permissions and SCCM client,SCCM Team
+sccm_reinstall,SCCM,Re-installation SCCM + TeamViewer installation,Device name,"Reinstall SCCM client, deploy TeamViewer",SCCM Team
+phone_configuration,SCCM,CMMS Phones Configurations - Parma,"Site/location, device details",Push phone config package and validate sync,SCCM Team
+application_expiry,SCCM,8x8 Work Expiring,Device/user details,Verify subscription/package validity and renew deployment,SCCM Team
+autocad_license,SCCM,AutoCAD License & Download Request,"User details, device name",Validate license assignment and deploy installer,SCCM Team
+quality_companion_access,SCCM,Access to Minitab & Quality Companion,"Hostname, user approval",Verify software entitlement and deploy package,SCCM Team
+unattended_policy_add,SCCM,Add PC to SCCM unattended policy,Device name,Add device to SCCM collection and apply unattended policy,SCCM Team
+unattended_policy_remove,SCCM,Remove device from SCCM unattended policy,Device name,Remove device from SCCM unattended collections,SCCM Team
+ms_project_installation,SCCM,Microsoft Projects installation,"User details, license request",Verify MS Project license and deploy package,SCCM Team
+phone_configuration,SCCM,Korinthos Phones Configuration + Process Tracking,"Site name, device details",Deploy phone configuration package and validate tracking setup,SCCM Team
+softphone_installation,Software Support,8x8 work installation,"User name, PC name","Verify license/application availability, basic reinstall if needed",SD Team
+remote_viewer_access,SCCM,SCCM remote viewer access,"User details, business justification",Provide MECM/SCCM remote control permissions,SCCM Team
+sccm_report_access,SCCM,SCCM report access,"User details, approval",Validate approval and assign SCCM reporting access,SCCM Team
+bitlocker_portal_access,SCCM,Bitlocker admin portal access,"User details, manager approval",Add user to Bitlocker admin access group,SCCM Team
+windows_upgrade,SCCM,Upgrade VM PC to Windows 11,"Device name, OS version",Validate compatibility and deploy Windows 11 upgrade task,SCCM Team
+remote_control_installation,SCCM,MECM Remote control viewer - Teamviewer installation,Device name,Install MECM remote viewer and TeamViewer package,SCCM Team
+sap_client_reinstall,SCCM,Re-install SAP Secure Login Client,"Device name, SAP version",Reinstall SAP Secure Login Client and verify connectivity,SCCM Team
+minitab_installation,Software Support,Request to setup Minitab,"Device name, user approval",Verify license availability and install software,SD Team
+software_bundle_installation,Software Support,Minitab Workspace and MS Project installation,"Device name, software list",Install requested software and validate access,SD Team
+pxe_boot_issue,SCCM,PXE Boot not protected,Device name/site,Check PXE configuration and SCCM distribution point settings,SCCM Team
+unattended_policy_add,SCCM,Add PC to SCCM unattended policy,Device name,Add device to unattended deployment collection,SCCM Team
+package_publish_request,SCCM,Publish packages for all PCs/Laptops,"Site/location, package details",Create deployment collection and publish packages,SCCM Team
+application_deployment,SCCM,Kechnec application deployment,"Application name, target devices",Package and deploy application through SCCM,SCCM Team
+teamviewer_deployment,SCCM,Deploy TeamViewer QS,Device name,Push TeamViewer package and validate installation,SCCM Team
+software_update,SCCM,Update Microsoft To Do,Device name,Deploy latest software update package,SCCM Team
+planner_installation,Software Support,MS Planner installation,"Device name, user details",Verify license and install Planner application,SD Team
+visio_installation,Software Support,Microsoft Visio installation request,"Device name, version required",Validate Visio license and install software,SD Team
+powerbi_update,Software Support,Update Power BI Desktop,"Device name, current version",Install/update latest Power BI version,SD Team
+ms_project_installation,Software Support,Microsoft Project installation,"Device name, license approval",Verify license and install MS Project,SD Team
+missing_software,Software Support,New laptop missing Minitab and 8x8,"Device name, software list",Install missing applications and verify functionality,SD Team
+telephone_system_support,Software Support,8x8 Telephone System,User/device details,Verify installation and connectivity,SD Team
+network_build,SCCM,Network Build at Osmaniye Site,"Site details, scope",Coordinate SCCM deployment and network configuration,SCCM Team
+software_installation,Software Support,Software installation in new laptop,"Device name, required software",Install requested software applications,SD Team
+office_install_failure,SCCM,Office install failing through Software Center,"Device name, error screenshot",Check SCCM client logs and repair Software Center cache,SCCM Team
+device_removal_sccm,SCCM,Remove device from SCCM/MECM,Device name,Delete device object from SCCM/MECM collections,SCCM Team
+imaging_issue,SCCM,Microsoft Surface Pro imaging issues,"Device name, error details","Check task sequence, drivers, and PXE boot configuration",SCCM Team
+sccm_installation,SCCM,SCCM installation request,Device name/site,Install SCCM client and validate communication,SCCM Team
+software_inventory_report,SCCM,SCCM report of Global Protect versions,Scope/region details,Generate SCCM inventory report,SCCM Team
+pxe_boot_troubleshooting,SCCM,Issue with PXE boot,"Device name, error screenshot",Validate PXE service point and boot image configuration,SCCM Team
+language_pack_installation,SCCM,Add German language pack for Software Center,"Device name, language pack",Deploy language pack via SCCM,SCCM Team
+project_plan_installation,Software Support,Planner and Project Plan 3 Installation,"Device name, user details",Verify license assignment and install applications,SD Team
+device_cleanup,SCCM,Delete PCs from MECM,Device list,Remove obsolete devices from MECM and SCCM,SCCM Team
+endpoint_cleanup,SCCM,"Delete computer objects from AD, SentinelOne and MECM","Device names, justification","Coordinate cleanup across AD, MECM, and security tools",SCCM Team
+powerbi_installation,Software Support,Power BI Pro installation,"Device name, user approval",Verify Power BI license and install software,SD Team
+application_access_issue,Software Support,Cannot access installed application,"Device name, application name",Reinstall or repair application,SD Team
+software_center_issue,SCCM,Software Center issue,"Device name, screenshot",Restart SCCM services and clear Software Center cache,SCCM Team
+deployment_collection_update,SCCM,Add device to deployment collection,"Device name, collection name",Update SCCM collection membership,SCCM Team
+package_creation,SCCM,Create deployment package,"Software details, deployment scope",Build SCCM package/application and test deployment,SCCM Team
+endpoint_management,SCCM,SCCM/MECM administration request,Device/user details,Validate request and apply required SCCM changes,SCCM Team

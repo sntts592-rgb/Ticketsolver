@@ -1,0 +1,10 @@
+{
+  "name": "IT Ticket Routing & KB Assistant",
+  "description": "An interactive full-stack database, ticket routing, and search assistant powered by Gemini text embeddings and a dynamic Firestore database.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
